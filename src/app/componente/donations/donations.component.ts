@@ -13,7 +13,7 @@ export class DonationsComponent implements OnInit{
   donation: boolean = false;
 
   target: number = 250;
-  dateTarget: string = '09-10-2022';
+  dateTarget: string = '03-01-2023';
   targetComplete: boolean = false;
   targetIncompleteByDate: boolean = false;
 

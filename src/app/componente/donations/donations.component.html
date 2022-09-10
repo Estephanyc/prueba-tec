@@ -1,18 +1,22 @@
 <div class="container">
 
-  <div class="header">
+  <div [ngClass] = "{'header': true, 'header-complete': targetComplete}">
     <span><b>${{remaining}}</b> still needed for this project </span>
   </div>
-  <div class="header-before"></div>
+  <div [ngClass] = "{'header-before': true, 'header-before-complete': targetComplete}"></div>
 
   <div class="spacer"></div>
 
   <div class="bar">
-    <div class="progress" [ngStyle]="{width: progress}"></div>
+    <div [ngClass] = "{'progress': true, 'progress-complete': targetComplete}" [ngStyle]="{width: progress}"></div>
   </div>
 
   <div class="box">
-    <p><span class="color-primary"><b>Only {{Date}} days left</b></span> to found this project.</p>
+    <div class="date-box">
+      <p><span class="color-primary"><b>Only {{Date}} days left</b></span> to found this project.</p>
+      <p class="date">Until 31 March</p>
+    </div>
+
     <p>Join the <b>{{ donorCount > 0 ? donorCount : '' }}</b> other donors who have already supported this project. Every dollar helps.</p>
 
     <div class="action">
@@ -36,7 +40,7 @@
   </div>
   
 </div>
-<img src="../../../assets/img/imgs_pequenas_03_AMBICION_PARTNERS_01.svg" alt="">
+
 <!-- Modal -->
 <div class="modal">
   <div class="modal-content">
@@ -50,6 +54,6 @@
         </div>
         <p class="title">$250</p>
       </div>
-      <img src="../../../assets/img/winner.png" alt="">
+      <img src="https://estephanyc.github.io/prueba/assets/img/winner.png" alt="">
   </div>
 </div>
