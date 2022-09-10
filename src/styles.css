@@ -13,7 +13,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     font-family: Nunito-Sans-Light;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     color: #929292;
 }
@@ -23,8 +23,9 @@ body {
     margin-right: auto;
     width: 40%;
     background-color: #fff;
-    padding: 40px;
+    padding: 20px;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .box {
@@ -60,12 +61,12 @@ body {
     height: 0;
     margin-left: 90%;
     border-left: 9px solid #0000;
-    border-top: 13px solid #178bcd;
+    border-top: 10px solid #178bcd;
     border-right: 9px solid #0000;
 }
 
 .header-before-complete {
-    border-top: 13px solid #67b930;
+    border-top: 10px solid #67b930;
 }
 
 .bar {
@@ -188,32 +189,25 @@ body {
 }
 
 .title {
-    color: #fff;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.subtitle {
-    color: #fff;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.circle {
-    padding: 30px;
-    box-sizing: border-box;
-    margin: auto;
-    border-radius: 50%;
-    background-color: #178bcd;
-    height: 220px;
-    width: 220px;
     text-align: center;
-    box-shadow: 0 0 0 20px #f5f5f5;
+}
+
+.title h1 {
+    font-size: 20px;
+    text-align: center;
+    line-height: 52px;
+    font-weight: bold;
+    color: #29292a;
+    margin: 0;
 }
 
 @media (min-width: 100px) and (max-width: 640px){
     .container {
         width: 100%;
+    }
+
+    body {
+        background-size: cover;
     }
 }
 

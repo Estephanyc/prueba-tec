@@ -1,5 +1,9 @@
 <div class="container">
 
+  <div class="title">
+    <h1>We want to grow <small class="color-secondary">¡Be part!</small></h1>
+  </div>
+  
   <div [ngClass] = "{'header': true, 'header-complete': targetComplete}">
     <span><b>${{remaining}}</b> still needed for this project </span>
   </div>
@@ -48,11 +52,11 @@
       <p class="close-button" (click)="openModal()" title="Cerrar">x</p>
     </div>
       <div class="circle">
-        <div class="subtitle">
+        <div class="modal-subtitle">
           <p>¡Thank you!</p>
           <small>We made it possible</small>
         </div>
-        <p class="title">$250</p>
+        <p class="modal-title">$250</p>
       </div>
       <img src="https://estephanyc.github.io/prueba/assets/img/winner.png" alt="">
   </div>

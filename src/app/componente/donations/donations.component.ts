@@ -28,11 +28,13 @@ export class DonationsComponent implements OnInit{
   }
 
   get remaining() {
-    return this.target - this.totalDonations;
+    const diff = this.target - this.totalDonations;
+    return diff < 0 ? 0 : diff;
   }
 
   get progress(){
     let percent = this.totalDonations / this.target * 100;
+    percent = percent > 100 ? 100 : percent;
     return String(percent) + '%';
   }
 
