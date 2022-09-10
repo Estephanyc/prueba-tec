@@ -36,11 +36,12 @@
 
 .close-button {
   float: right;
-  width: 20px;
   text-align: center;
   cursor: pointer;
   border-radius: 50px;
   background-color: lightgray;
+  width: 25px;
+  height: 25px;
 }
 
 .close-button:hover {

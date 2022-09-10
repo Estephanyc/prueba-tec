@@ -22,7 +22,7 @@
     
     <div class="spacer"></div>
 
-    <small class="color-primary" *ngIf="quantityError">Please enter a value between 0 and 250</small>
+    <small class="color-primary" *ngIf="quantityError">Please enter a value between 1 and 250</small>
     <small class="color-secondary" *ngIf="donation && !targetComplete">¡Thanks for your donation!</small>
     <small *ngIf="!targetComplete && !targetIncompleteByDate && !donation && !quantityError" class="color-secondary"><i>Why give $50?</i></small>
     <small *ngIf="targetComplete" class="color-secondary"><b>We have reached our goal thanks for your support.</b> </small>
