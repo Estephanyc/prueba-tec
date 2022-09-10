@@ -1,0 +1,55 @@
+<div class="container">
+
+  <div class="header">
+    <span><b>${{remaining}}</b> still needed for this project </span>
+  </div>
+  <div class="header-before"></div>
+
+  <div class="spacer"></div>
+
+  <div class="bar">
+    <div class="progress" [ngStyle]="{width: progress}"></div>
+  </div>
+
+  <div class="box">
+    <p><span class="color-primary"><b>Only {{Date}} days left</b></span> to found this project.</p>
+    <p>Join the <b>{{ donorCount > 0 ? donorCount : '' }}</b> other donors who have already supported this project. Every dollar helps.</p>
+
+    <div class="action">
+      <span class="currencyinput">$<input type="number" min="1" max="250" [(ngModel)]="donationValue" [disabled]="targetComplete || targetIncompleteByDate" required></span>
+      <button class="btn btn-primary" (click)="donate()" title="Give now" [disabled]="targetComplete || targetIncompleteByDate">Give now</button>
+    </div>
+    
+    <div class="spacer"></div>
+
+    <small class="color-primary" *ngIf="quantityError">Please enter a value between 0 and 250</small>
+    <small class="color-secondary" *ngIf="donation && !targetComplete">¡Thanks for your donation!</small>
+    <small *ngIf="!targetComplete && !targetIncompleteByDate && !donation && !quantityError" class="color-secondary"><i>Why give $50?</i></small>
+    <small *ngIf="targetComplete" class="color-secondary"><b>We have reached our goal thanks for your support.</b> </small>
+    <small *ngIf="targetIncompleteByDate" class="color-primary"><b>This time we did not reach our goal, but we greatly appreciate your contribution.</b> </small>
+
+  </div>
+
+  <div class="footer action">
+    <button class="btn btn-secondary" title="Save for later">Save for later</button>
+    <button class="btn btn-secondary" title="Tell your friends">Tell your friends</button>
+  </div>
+  
+</div>
+<img src="../../../assets/img/imgs_pequenas_03_AMBICION_PARTNERS_01.svg" alt="">
+<!-- Modal -->
+<div class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <p class="close-button" (click)="openModal()" title="Cerrar">x</p>
+    </div>
+      <div class="circle">
+        <div class="subtitle">
+          <p>¡Thank you!</p>
+          <small>We made it possible</small>
+        </div>
+        <p class="title">$250</p>
+      </div>
+      <img src="../../../assets/img/winner.png" alt="">
+  </div>
+</div>
